@@ -1,5 +1,17 @@
 name: Build Fonts
 
+on: 
+  push:
+    branches: 
+    - master
+    paths:
+    - sources/**
+  pull_request:
+    branches: 
+    - master
+    paths:
+    - sources/**
+    
 jobs:
   static-font-ci-job:
     runs-on: ubuntu-latest
